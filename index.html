@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="error-message"></div>
+    <main class="kanban">
+        <nav>
+            <div class="left">Kanban Board</div>
+            <div class="right"><button id="toggle-modal">Add new Task</button></div>
+        </nav>
+
+        <section class="board">
+            <div id="todo" class="task-column">
+                <div class="headings">
+                    <div class="left">To Do</div>
+                    <div class="right">Count</div>
+                </div>
+                <!-- <div draggable="true"class="task-to-do">
+                    <h2>Task 1</h2>
+                    <p>Description for Task 1</p>
+                    <button>Delete</button>
+                </div> -->
+            </div>
+            <div id="progress" class="task-column">
+                <div class="headings">
+                    <div class="left">In-progress</div>
+                    <div class="right">Count</div>
+                </div>
+                </div>
+            <div id="done" class="task-column">
+                <div class="headings">
+                     <div class="left">Done</div>
+                     <div class="right">Count</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+       
+    <div class="modal  add-new-task">
+        <div class="bg"></div>
+        <div class="center">
+        <input type="text" id="task-title-input" placeholder="Task Title">           <!--meant for single-line input, won't allow multiple lines-->
+        <textarea id="task-desc-input" placeholder="Task Description"></textarea>    <!--meant for multi-line input-->
+        <button id="add-new-task" class="add-task-btn">Add Task</button>
+    </div>
+</div>
+
+    
+<script src="script.js"r></script>
+</body>
+</html>
