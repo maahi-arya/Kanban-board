@@ -100,6 +100,51 @@ nav .left:hover{
     gap: var(--padding-md);
     box-shadow: 0 8px 8px whitesmoke;
 }
+
+/* Task card base style update for modern look */
+.board .task-to-do {
+    background-color: #232338; /* Darker base for more contrast */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(128, 0, 255, 0.07);
+    transition: 
+        transform 0.3s ease, 
+        box-shadow 0.3s ease, 
+        background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-md);
+    cursor: grab;
+    position: relative;
+    
+}
+
+.board .task-to-do:hover {
+    transform: translateY(-6px) scale(1.035);
+    background: linear-gradient(
+        130deg, 
+        rgba(128,0,255,0.18) 0%, 
+        rgba(78, 24, 140,0.15) 60%, 
+        rgba(30,30,47,1) 100%
+    );
+    box-shadow: 0 4px 28px 0 rgba(128, 0, 255, 0.26), 0 1.5px 4px 0 rgba(31, 27, 66, 0.14);
+    z-index: 2;
+}
+.board .task-to-do:hover h2 {
+    color: #be9cff;
+    transition: color 0.3s ease;
+}
+
+.board .task-to-do h2 {
+    color: #f3f2fc;
+    margin-bottom: 0.3em;
+    line-height: 1.15;
+    font-size: 1.18em;
+    transition: color 0.3s ease;
+}
+.board .task-to-do p {
+    color: #e2e1f5;
+}
+
 .board .task-to-do{
     background-color: var(--bg-task-color);
     display: flex;
@@ -118,10 +163,19 @@ nav .left:hover{
     background-color: var(--delete-color);
     color: var(--primary-text-color);
 }
+.board .task-column {
+    transition: transform 0.18s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.board .task-column:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
 .board .task-column.hover-over{
     scale: 1.05;
     border: 2px dashed var(--primary-text-color);
-    transition : all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);       /*cubic-bezier- first two values= control start behaviour and last two values = control end behaviour*/
+    transition : all 0.7s cubic-bezier(0.07, 0.5, 0.15, 0.4);       /*cubic-bezier- first two values= control start behaviour and last two values = control end behaviour*/
 }
 .board .headings{
     display: flex;
